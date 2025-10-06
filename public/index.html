@@ -7,8 +7,7 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
-    />
+      content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -24,20 +23,55 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <link rel="stylesheet" href="src/Weather.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&amp;display=swap"
+      rel="stylesheet" />
+
+    <title>Weather React App</title>
   </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <div class="weather-app">
+    <header>
+      <form class="search-form" id="search-form">
+        <input
+          type="search"
+          placeholder="Enter city"
+          required
+          class="search-form-input"
+          id="search-form-input" />
+        <input type="submit" value="Search" class="search-form-button" />
+      </form>
+    </header>
+    <main>
+      <div class="weather-app-data">
+        <div>
+          <h1 class="weather-app-city" id="city">Paris</h1>
+          <p class="weather-app-details">
+            <span id="time">Monday 13:00</span>
+            ,
+            <span id="description">clear sky</span>
+            <br />
+            Humidity: <strong id="humidity"></strong>, Wind:
+            <strong id="wind-speed"></strong>
+          </p>
+        </div>
+        <div>
+          <div class="weather-app-temperature-container">
+            <div class="weather-app-icon" id="icon"></div>
+            <div class="weather-app-temperature" id="temperature">12</div>
+            <div class="weather-app-unit">°C</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      Coded by <a href="https://github.com/GwenCodes">Gwen Munoz</a>, code is
+      open-sourced on
+      <a href="https://github.com/GwenCodes?tab=repositories">Github</a> and
+      hosted on
+      <a href="https://gm-weather-app-project.netlify.app/">Netlify</a>
+    </footer>
+  </div>
 </html>
